@@ -1,0 +1,248 @@
+@import url("https://fonts.google.com/specimen/Poppins?query=poppi");
+* { margin:  0; 
+padding:   0;
+box-sizing:border-box ;
+font-family: 'Poppins', sans-serif;}
+body{
+    background:lightblue ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.contenedor{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55pc rgba(0, 0, 0, 0.1);
+}
+.contenedor .lado_izquierdo{
+    position: relative;
+    background:#003147;
+    padding: 40px;
+}
+
+.textoPerfil {
+     position: relative;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.fotoPefil{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.fotoPefil img{                    /*realizo unos ajustes a la foto perfil del CV*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.textoPerfil h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.5em;    /*separacion entre la linea de arriba el h2 con el "span". intento dejar una distancia producente*/
+}
+.textoPerfil h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+
+}
+.InfoContacto{
+    padding-top: 40px;
+}
+.titulo{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px  ;
+}
+.InfoContacto ul{
+    position: relative;
+}
+.InfoContacto ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.icono{
+    display: inline-block ;
+    width: 20px ;
+    font-size: 18px;
+    color: skyblue ;
+}
+.InfoContacto ul li .texto{
+    color: white;
+    font-weight: 300;
+}
+.InfoContacto.Educacion li{
+    margin-top: 15px;
+}
+.InfoContacto.Educacion h5{
+    color: skyblue;
+    font-weight: 500;
+}
+.InfoContacto.Educacion h4:nth-child(2){
+    color:#fff;
+    font-weight: 500;
+}
+.InfoContacto.Educacion h4{
+    color:#fff;
+    font-weight: 200;
+}
+.InfoContacto.Idioma .porcentaje        /*realziaro la barra de progreso de los idiomas*/
+{    
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background: black;
+    display: block;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+.InfoContacto.Idioma .porcentaje div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+    border-radius: 10px;
+}
+.contenedor .lado_derecho{
+    position: relative;
+    background:#fff;
+    padding: 40px;
+}
+.acerca_de_mi{
+    margin-bottom: 50px;
+}
+.acerca_de_mi:last-child{
+    margin-bottom: 0px;
+}
+.titulo2{
+    color:#003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.p{
+    color: #333;
+}
+.acerca_de_mi .caja{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.acerca_de_mi .caja .años_compañia{
+    min-width: 150px;
+}
+.acerca_de_mi .caja .años_compañia h5{
+    text-transform: uppercase;
+    color: grey;
+    font-weight: 600;
+}
+.acerca_de_mi .caja .texto h4{
+    text-transform: uppercase;
+    color:#2a7da2;
+    font-size: 16px;
+}
+.hablidades .caja{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+}
+.hablidades .caja h4{
+    text-transform: uppercase;
+    color:#848c99;
+    font-weight: 500;
+}
+.hablidades .caja  .porcentaje{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+    
+}
+.hablidades .caja  .porcentaje div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+    border-radius: 15px;
+}
+.intereses ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.intereses ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.intereses ul li .fa{
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+}
+@media(max-width:1000px){
+.contenedor{
+    margin: 10px;
+    grid-template-columns: repeat(1,1fr);
+    }
+    .intereses ul{
+        grid-template-columns: repeat(2,1fr);
+
+    }
+}
+@media(max-width:600px)
+{
+    .acerca_de_mi .caja{
+        flex-direction: column;
+    }
+    .acerca_de_mi .caja .años_compañia{
+        margin-bottom: 5px;
+    }
+    .intereses ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
+.esconder{
+    display: none;
+}
+.mostrar{
+    display: block;
+}
+.LeerMas{
+    position: center;
+    border-radius: 10px;
+    color:white;
+    background: #003147;
+    cursor: pointer;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
